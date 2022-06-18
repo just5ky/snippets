@@ -42,7 +42,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            justsky/spidertrap
+            ${{ secrets.DOCKERHUB_USERNAME }}/spidertrap
             ghcr.io/${{ github.repository }}
 
       - name: Build and push Docker images
